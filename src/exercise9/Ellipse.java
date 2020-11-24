@@ -28,7 +28,7 @@ public boolean isValid(){
 }
 
 public void initialize(){
-  while(isValid == true){
+  while(isValid){
     System.out.print("Start Point: ");
     anfangsPunkt.initialize();
     System.out.print("a: ");
