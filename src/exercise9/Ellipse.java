@@ -29,11 +29,8 @@ public boolean isValid(){
 
 public void initialize(){
   do{
-    System.out.print("Start Point: ");
     anfangsPunkt.initialize();
-    System.out.print("a: ");
     a = Utils.INPUT.nextDouble();
-    System.out.print("b: ");
     b = Utils.INPUT.nextDouble();
   }while(!isValid());
 }
