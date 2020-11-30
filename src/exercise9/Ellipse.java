@@ -28,14 +28,14 @@ public boolean isValid(){
 }
 
 public void initialize(){
-  while(!isValid()){
+  do{
     System.out.print("Start Point: ");
     anfangsPunkt.initialize();
     System.out.print("a: ");
     a = Utils.INPUT.nextDouble();
     System.out.print("b: ");
     b = Utils.INPUT.nextDouble();
-  }
+  }while(!isValid());
 }
 
 public double calculatePerimeter(){
