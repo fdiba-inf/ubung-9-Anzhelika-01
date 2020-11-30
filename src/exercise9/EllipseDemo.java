@@ -13,7 +13,7 @@ public class EllipseDemo {
         System.out.println("Ellipse 2: " + ellipse2);
         System.out.println("Ellipse 3: " + ellipse3);
         System.out.println("Ellipse 4: "+ ellipse4);
-        System.out.println("Ellipse 2 equals Ellipse 1: " + ellipse1.equal(ellipse2));
-        System.out.println("Ellipse 2 equals Ellipse 3: " + ellipse3.equal(ellipse2));
+        System.out.println("Ellipse 2 equals Ellipse 1: " + ellipse2.equal(ellipse1));
+        System.out.println("Ellipse 2 equals Ellipse 3: " + ellipse2.equal(ellipse3));
     }
 }

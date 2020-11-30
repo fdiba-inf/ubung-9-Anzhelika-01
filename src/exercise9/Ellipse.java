@@ -19,8 +19,8 @@ public Ellipse(Point anfangsPunkt, double a, double b){
 
 public Ellipse(Ellipse otherEllipse){
   anfangsPunkt = new Point(otherEllipse.anfangsPunkt);
-  a = otherEllipse.a;
-  b = otherEllipse.b;
+  this.a = otherEllipse.a;
+  this.b = otherEllipse.b;
 }
 
 public boolean isValid(){
@@ -39,7 +39,7 @@ public void initialize(){
 }
 
 public double calculatePerimeter(){
-  return Math.PI * (3 * (a + b) - Math.sqrt((3* a + b) * (a + 3 * b)));
+  return Math.PI * (3 * (a + b) - Math.sqrt((3* a + b) * (3 * b + a)));
 }
 
 public double calculateArea(){
@@ -60,11 +60,11 @@ public String toString(){
 }
 
 public boolean equal(Ellipse otherEllipse) {
-        boolean sameA = Utils.equals(a, otherEllipse.a);
-        boolean sameB = Utils.equals(b, otherEllipse.b);
-        boolean sameAReversed = Utils.equals(a, otherEllipse.b);
-        boolean sameBReversed = Utils.equals(b, otherEllipse.a);
+    boolean vergleich1 = Utils.equals(this.a, otherEllipse.a);
+    boolean vergleich2 = Utils.equals(this.b, otherEllipse.b);
+    boolean vergleich3 = Utils.equals(this.a, otherEllipse.b);
+    boolean vergleich4 = Utils.equals(this.b, otherEllipse.a);
 
-        return (sameA && sameB) || (sameAReversed && sameBReversed);
+    return ((vergleich1 && vergleich2) || (vergleich3 && vergleich4));
     }
 }
